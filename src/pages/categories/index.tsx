@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-import { CATEGORIES, type Category } from "@/data/mock";
+import { type Category } from "@/data/mock";
 import { categoryFormSchema, type CategoryFormSchema } from "@/forms/category";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type { ReactElement } from "react";
