@@ -3,19 +3,8 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    DATABASE_URL: z
-      .string()
-      // .url(),
-      .refine(
-        (val) =>
-          val.startsWith("file:") ||
-          val.startsWith("postgresql://") ||
-          val.startsWith("mysql://") ||
-          val.startsWith("sqlite:"),
-        {
-          message: "Invalid DATABASE_URL format",
-        },
-      ),
+    DATABASE_URL: z.string().url(),
+
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
