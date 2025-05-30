@@ -24,7 +24,7 @@ const DashboardPage: NextPageWithLayout = () => {
     setSelectedCategory(categoryId);
   };
 
-  const handleAddToCart = (productId: string) => {};
+  // const handleAddToCart = (productId: string) => {};
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter((product) => {
@@ -91,13 +91,13 @@ const DashboardPage: NextPageWithLayout = () => {
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {filteredProducts.map((product) => (
-                <ProductMenuCard
+              {/* {filteredProducts.map((product) => (
+                // <ProductMenuCard
                   key={product.id}
                   product={product}
-                  onAddToCart={handleAddToCart}
+                  // onAddToCart={handleAddToCart}
                 />
-              ))}
+              ))} */}
             </div>
           )}
         </div>
